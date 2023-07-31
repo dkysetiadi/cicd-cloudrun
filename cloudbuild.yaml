@@ -5,7 +5,7 @@ steps:
 # push the container image to container registry
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/$PROJECT_ID/myimage']
- deploy container image to cloud run
+# deploy container image to cloud run
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['beta', 'run', 'deploy', 'frontend', '--image', 'gcr.io/$PROJECT_ID/myimage', '--platform', 'managed', '--allow-unauthenticated']
 images:
