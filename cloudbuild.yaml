@@ -7,6 +7,6 @@ steps:
   args: ['push', 'gcr.io/$PROJECT_ID/myimage']
 # deploy container image to cloud run
 - name: "gcr.io/cloud-builders/gcloud"
-  args: ['run', 'deploy', '--image', 'gcr.io/devops-393109/myimage', '--region', 'asia-southeast2', '--allow-unauthenticated', '--platform', 'managed']
+  args: ['run', 'deploy', 'myservice' '--image', 'gcr.io/devops-393109/myimage', '--region', 'asia-southeast2', '--allow-unauthenticated', '--platform', 'managed']
 images:
 - gcr.io/$PROJECT_ID/myimage
